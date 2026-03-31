@@ -4,16 +4,18 @@ export function Footer() {
   const t = useTranslations('footer');
 
   return (
-    <footer className="py-10 px-6 text-center border-t border-card-border">
-      <p className="text-dark-gray text-sm">
-        1cyber.one
-      </p>
-      <p className="text-dark-gray text-sm">
-        {t('location')}
-      </p>
-      <p className="text-dark-gray text-sm">
-        &copy; {new Date().getFullYear()}
-      </p>
+    <footer className="relative z-10 py-12 px-6 border-t border-card-border">
+      <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="text-dark-gray text-xs tracking-widest">
+          <span className="text-green-dim">1cyber</span>.one
+        </div>
+        <div className="text-dark-gray text-xs text-center">
+          {t('location')}
+        </div>
+        <div className="text-dark-gray text-xs">
+          &copy; {new Date().getFullYear()} <span className="text-green-dark">// all rights reserved</span>
+        </div>
+      </div>
     </footer>
   );
 }

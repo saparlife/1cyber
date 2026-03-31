@@ -89,6 +89,9 @@
     "submit": "Send request",
     "success": "Request sent. We will contact you."
   },
+  "clients": {
+    "title": "Trusted by"
+  },
   "footer": {
     "location": "Astana, Kazakhstan"
   }
