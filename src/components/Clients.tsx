@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const clients = [
   { name: 'Temir Service', logo: '/clients/temir-service.svg', url: 'https://temir-service.kz/' },
-  { name: 'ShopAdili', logo: '/clients/shopadili.jpg', url: 'https://shopadili.com/' },
+  { name: 'ShopAdili', logo: '/clients/shopadili.png', url: 'https://shopadili.com/' },
   { name: 'CPG Media Group', logo: '/clients/cpgmedia.svg', url: 'https://cpgmediagroup.com/' },
   { name: 'Shaqyr', logo: '/clients/shaqyr.png', url: 'https://www.shaqyr.com/' },
 ];
