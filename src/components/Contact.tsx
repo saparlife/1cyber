@@ -6,11 +6,39 @@ import { useState } from 'react';
 export function Contact() {
   const t = useTranslations('contact');
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // TODO: replace with Telegram bot API or webhook
-    setSubmitted(true);
+    setSending(true);
+    setError(false);
+
+    const form = new FormData(e.currentTarget);
+    const data = {
+      name: form.get('name'),
+      company: form.get('company'),
+      website: form.get('website'),
+      phone: form.get('phone'),
+      message: form.get('message'),
+    };
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -50,11 +78,16 @@ export function Contact() {
             />
           </div>
 
+          {error && (
+            <p className="text-red text-sm text-center">Error. Try again.</p>
+          )}
+
           <button
             type="submit"
-            className="btn-glitch border-2 border-green text-green px-8 py-3 text-sm font-bold uppercase tracking-wider w-full transition-all duration-200 hover:shadow-[0_0_20px_rgba(0,255,65,0.3)] cursor-pointer"
+            disabled={sending}
+            className="btn-glitch border-2 border-green text-green px-8 py-3 text-sm font-bold uppercase tracking-wider w-full transition-all duration-200 hover:shadow-[0_0_20px_rgba(0,255,65,0.3)] cursor-pointer disabled:opacity-50 disabled:cursor-wait"
           >
-            {t('submit')}
+            {sending ? '...' : t('submit')}
           </button>
         </form>
       )}
