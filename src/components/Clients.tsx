@@ -2,10 +2,10 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 const clients = [
-  { name: 'Client 1', logo: '/clients/client-1.svg' },
-  { name: 'Client 2', logo: '/clients/client-2.svg' },
-  { name: 'Client 3', logo: '/clients/client-3.svg' },
-  { name: 'Client 4', logo: '/clients/client-4.svg' },
+  { name: 'Temir Service', logo: '/clients/temir-service.svg', url: 'https://temir-service.kz/' },
+  { name: 'ShopAdili', logo: '/clients/shopadili.jpg', url: 'https://shopadili.com/' },
+  { name: 'CPG Media Group', logo: '/clients/cpgmedia.svg', url: 'https://cpgmediagroup.com/' },
+  { name: 'Shaqyr', logo: '/clients/shaqyr.png', url: 'https://www.shaqyr.com/' },
 ];
 
 export function Clients() {
@@ -19,18 +19,21 @@ export function Clients() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 fade-in">
         {clients.map((client, i) => (
-          <div
+          <a
             key={i}
-            className="bg-card-bg border border-card-border p-6 flex items-center justify-center hover:border-green transition-colors"
+            href={client.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-card-bg border border-card-border h-24 flex items-center justify-center p-4 hover:border-green transition-colors"
           >
             <Image
               src={client.logo}
               alt={client.name}
-              width={120}
-              height={48}
-              className="opacity-50 hover:opacity-80 transition-opacity brightness-0 invert"
+              width={140}
+              height={56}
+              className="max-h-12 w-auto object-contain opacity-50 hover:opacity-90 transition-opacity brightness-0 invert"
             />
-          </div>
+          </a>
         ))}
       </div>
     </section>

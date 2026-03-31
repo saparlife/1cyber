@@ -39,6 +39,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: meta.title,
       description: meta.description,
     },
+    icons: {
+      icon: '/favicon.svg',
+    },
     robots: {
       index: true,
       follow: true,

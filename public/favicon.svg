@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00ff41"/>
+      <stop offset="100%" stop-color="#00cc33"/>
+    </linearGradient>
+  </defs>
+  <!-- Shield shape -->
+  <path d="M32 4 L56 16 V34 C56 48 44 58 32 62 C20 58 8 48 8 34 V16 Z" fill="none" stroke="url(#g)" stroke-width="3"/>
+  <!-- Inner glow shield -->
+  <path d="M32 10 L52 20 V34 C52 45 42 54 32 58 C22 54 12 45 12 34 V20 Z" fill="#00ff41" opacity="0.1"/>
+  <!-- Lock / cyber symbol -->
+  <text x="32" y="42" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="24" fill="#00ff41">1</text>
+</svg>
