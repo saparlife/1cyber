@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "1CYBER — Penetration Testing & Security Audit",
+    "description": "We find vulnerabilities in your system before someone else does. Pentesting, security audit, monitoring. Astana, Kazakhstan."
+  },
+  "nav": {
+    "ru": "RUS",
+    "kz": "KAZ",
+    "en": "ENG"
+  },
+  "hero": {
+    "headline": "We find holes in your system",
+    "sub": "Pentesting, security audit, monitoring.\nBefore someone else does.",
+    "cta": "Get in touch"
+  },
+  "findings": {
+    "title": "What we find",
+    "items": [
+      {
+        "name": "Unauthenticated APIs",
+        "desc": "Your clients, payments, budget — accessible with a single curl request"
+      },
+      {
+        "name": "Hardcoded keys",
+        "desc": "API keys in source maps, fallback tokens in code — full access to WhatsApp, payment systems"
+      },
+      {
+        "name": "Source code leaks",
+        "desc": "Source maps, .git repositories, server.js — your entire codebase exposed"
+      },
+      {
+        "name": "Personal data exposure",
+        "desc": "Names, phone numbers, payments of your clients — publicly accessible"
+      },
+      {
+        "name": "Server vulnerabilities",
+        "desc": "SSH with password, open DB ports, CORS wildcard, missing security headers"
+      },
+      {
+        "name": "Unauthenticated write access",
+        "desc": "Creating, deleting data, sending messages — no login required"
+      }
+    ]
+  },
+  "process": {
+    "title": "Process",
+    "steps": [
+      { "cmd": "recon", "desc": "Information gathering: subdomains, DNS, ports, technologies" },
+      { "cmd": "scan", "desc": "Automated scanning: nuclei, nikto, testssl" },
+      { "cmd": "exploit", "desc": "Manual testing: API, auth, IDOR, source maps, keys" },
+      { "cmd": "report", "desc": "Report: every vulnerability with PoC and remediation guide" },
+      { "cmd": "monitor", "desc": "Monthly checks: no new vulnerabilities appear" }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing",
+    "pentest": {
+      "name": "PENTEST",
+      "price": "from 2,000,000 ₸",
+      "features": [
+        "Full black-box audit",
+        "All subdomains and servers",
+        "API testing",
+        "Source code analysis",
+        "Report with PoC for each vulnerability",
+        "Prioritized remediation plan",
+        "Timeframe: 3–5 days"
+      ]
+    },
+    "monitoring": {
+      "name": "MONITORING",
+      "price": "from 100,000 ₸/mo",
+      "features": [
+        "Monthly security assessment",
+        "New vulnerability scanning",
+        "Remediation verification",
+        "Report: all clear or new issues",
+        "Priority support"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "company": "Company",
+    "website": "Website",
+    "phone": "Phone / Telegram",
+    "message": "Message",
+    "submit": "Send request",
+    "success": "Request sent. We will contact you."
+  },
+  "footer": {
+    "location": "Astana, Kazakhstan"
+  }
+}
