@@ -1,26 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 @import "tailwindcss";
 
 :root {
   --bg: #0a0a0a;
   --green: #00ff41;
-  --green-dim: #00cc33;
-  --green-dark: #003300;
   --red: #ff0040;
-  --red-dim: #cc0033;
   --gray: #c0c0c0;
-  --dark-gray: #555;
-  --card-bg: #0d0d0d;
-  --card-border: #1a1a1a;
+  --dark-gray: #666;
+  --card-bg: #111111;
+  --card-border: #222222;
 }
 
 @theme inline {
   --color-bg: var(--bg);
   --color-green: var(--green);
-  --color-green-dim: var(--green-dim);
-  --color-green-dark: var(--green-dark);
   --color-red: var(--red);
-  --color-red-dim: var(--red-dim);
   --color-gray: var(--gray);
   --color-dark-gray: var(--dark-gray);
   --color-card-bg: var(--card-bg);
@@ -29,12 +23,6 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -46,254 +34,68 @@ body {
   overflow-x: hidden;
 }
 
-/* ═══════════════ CRT MONITOR EFFECT ═══════════════ */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9998;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0, 255, 65, 0.015) 2px,
-    rgba(0, 255, 65, 0.015) 4px
-  );
-}
-
+/* Scanline overlay */
 body::after {
   content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  background: radial-gradient(
-    ellipse at center,
-    transparent 60%,
-    rgba(0, 0, 0, 0.4) 100%
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 65, 0.03) 2px,
+    rgba(0, 255, 65, 0.03) 4px
   );
 }
 
-/* ═══════════════ CRT FLICKER ═══════════════ */
-@keyframes flicker {
-  0% { opacity: 0.97; }
-  5% { opacity: 0.95; }
-  10% { opacity: 0.98; }
-  15% { opacity: 0.96; }
-  20% { opacity: 0.99; }
-  100% { opacity: 0.98; }
-}
-
-body {
-  animation: flicker 4s infinite;
-}
-
-/* ═══════════════ BLINKING CURSOR ═══════════════ */
+/* Blinking cursor */
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
 
-.cursor-blink::after {
-  content: '█';
-  animation: blink 0.8s step-end infinite;
-  color: var(--green);
-  font-weight: 400;
+.cursor-blink {
+  animation: blink 1s step-end infinite;
 }
 
-/* ═══════════════ GLITCH EFFECT ═══════════════ */
-@keyframes glitch-1 {
-  0%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
-  20% { clip-path: inset(20% 0 60% 0); transform: translate(-3px, -1px); }
-  40% { clip-path: inset(60% 0 10% 0); transform: translate(3px, 1px); }
-  60% { clip-path: inset(40% 0 30% 0); transform: translate(-2px, 2px); }
-  80% { clip-path: inset(10% 0 70% 0); transform: translate(2px, -1px); }
+/* Fade in on scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-@keyframes glitch-2 {
-  0%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
-  20% { clip-path: inset(70% 0 5% 0); transform: translate(3px, 1px); }
-  40% { clip-path: inset(5% 0 70% 0); transform: translate(-3px, -1px); }
-  60% { clip-path: inset(30% 0 40% 0); transform: translate(2px, -2px); }
-  80% { clip-path: inset(50% 0 20% 0); transform: translate(-2px, 1px); }
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.glitch {
-  position: relative;
-}
-
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.glitch::before {
-  color: var(--red);
-  animation: glitch-1 3s infinite linear;
-  opacity: 0.6;
-}
-
-.glitch::after {
-  color: #00ccff;
-  animation: glitch-2 3s infinite linear;
-  animation-delay: 0.1s;
-  opacity: 0.6;
-}
-
-.glitch:hover::before,
-.glitch:hover::after {
-  animation-duration: 0.3s;
-  opacity: 0.8;
-}
-
-/* ═══════════════ GLITCH BUTTON ═══════════════ */
-@keyframes btn-glitch-anim {
+/* Glitch hover on buttons */
+@keyframes glitch {
   0% { transform: translate(0); }
-  10% { transform: translate(-3px, -2px); }
-  20% { transform: translate(3px, 2px); }
-  30% { transform: translate(-2px, 1px); }
-  40% { transform: translate(2px, -1px); }
-  50% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
   100% { transform: translate(0); }
 }
 
-.btn-cyber {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
+.btn-glitch:hover {
+  animation: glitch 0.3s ease;
+  background: var(--red) !important;
+  border-color: var(--red) !important;
+  color: #fff !important;
 }
 
-.btn-cyber::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--green);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.btn-cyber:hover::before {
-  opacity: 0.1;
-}
-
-.btn-cyber:hover {
-  box-shadow:
-    0 0 10px rgba(0, 255, 65, 0.3),
-    0 0 40px rgba(0, 255, 65, 0.1),
-    inset 0 0 10px rgba(0, 255, 65, 0.1);
-  animation: btn-glitch-anim 0.4s ease;
-  text-shadow: 0 0 8px rgba(0, 255, 65, 0.5);
-}
-
-/* ═══════════════ DECODE REVEAL ═══════════════ */
-@keyframes decode-in {
-  0% { opacity: 0; transform: translateY(30px); filter: blur(4px); }
-  50% { opacity: 0.5; filter: blur(2px); }
-  100% { opacity: 1; transform: translateY(0); filter: blur(0); }
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.reveal.visible {
-  animation: decode-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.reveal-stagger.visible {
-  animation: decode-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-/* ═══════════════ SCAN LINE SWEEP ═══════════════ */
-@keyframes scan-sweep {
-  0% { top: -2px; opacity: 1; }
-  100% { top: 100%; opacity: 0; }
-}
-
-.scan-line {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--green);
-  box-shadow: 0 0 10px var(--green), 0 0 30px var(--green);
-  animation: scan-sweep 3s ease-in-out infinite;
-  pointer-events: none;
-}
-
-/* ═══════════════ TYPING CURSOR ═══════════════ */
-@keyframes type-cursor {
-  0%, 100% { border-right-color: var(--green); }
-  50% { border-right-color: transparent; }
-}
-
-/* ═══════════════ GLOW PULSE ═══════════════ */
-@keyframes glow-pulse {
-  0%, 100% { text-shadow: 0 0 5px var(--green), 0 0 10px var(--green); }
-  50% { text-shadow: 0 0 10px var(--green), 0 0 30px var(--green), 0 0 50px var(--green-dim); }
-}
-
-.glow {
-  text-shadow: 0 0 5px var(--green), 0 0 15px var(--green);
-}
-
-.glow-pulse {
-  animation: glow-pulse 2s ease-in-out infinite;
-}
-
-/* ═══════════════ BORDER GLOW ═══════════════ */
-@keyframes border-glow {
-  0%, 100% { border-color: var(--card-border); }
-  50% { border-color: var(--green-dim); box-shadow: 0 0 10px rgba(0, 255, 65, 0.1); }
-}
-
-/* ═══════════════ TERMINAL INPUT ═══════════════ */
+/* Terminal input style */
 input, textarea {
   font-family: 'JetBrains Mono', monospace;
 }
 
-input:focus, textarea:focus {
-  text-shadow: 0 0 5px var(--green);
-}
-
-/* ═══════════════ SELECTION ═══════════════ */
+/* Selection */
 ::selection {
   background: var(--green);
   color: var(--bg);
-}
-
-/* ═══════════════ SCROLLBAR ═══════════════ */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--green-dark);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--green-dim);
-}
-
-/* ═══════════════ NOISE TEXTURE ═══════════════ */
-@keyframes noise {
-  0%, 100% { background-position: 0 0; }
-  10% { background-position: -5% -10%; }
-  30% { background-position: 3% 5%; }
-  50% { background-position: -2% -3%; }
-  70% { background-position: 7% -7%; }
-  90% { background-position: -4% 4%; }
 }

@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-export function ScrollReveal() {
+export function ScrollAnimator() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -15,7 +15,7 @@ export function ScrollReveal() {
       { threshold: 0.1 }
     );
 
-    document.querySelectorAll('.reveal').forEach((el) => {
+    document.querySelectorAll('.fade-in').forEach((el) => {
       observer.observe(el);
     });
 
