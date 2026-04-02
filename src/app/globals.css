@@ -99,3 +99,20 @@ input, textarea {
   background: var(--green);
   color: var(--bg);
 }
+
+/* Print styles for dogovor */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12px !important;
+  }
+
+  body::after {
+    display: none !important;
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+}

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "1CYBER — Penetration Testing & Security Audit",
-    "description": "We find vulnerabilities in your system before someone else does. Pentesting, security audit, monitoring. Astana, Kazakhstan."
+    "title": "1CYBER — Security Testing for Your Business",
+    "description": "We test websites, mobile apps and servers for vulnerabilities. Penetration testing, security audit, monitoring. Astana, Kazakhstan."
   },
   "nav": {
     "ru": "RUS",
@@ -9,47 +9,64 @@
     "en": "ENG"
   },
   "hero": {
-    "headline": "We find holes in your system",
-    "sub": "Pentesting, security audit, monitoring.\nBefore someone else does.",
+    "headline": "We test your business security",
+    "sub": "We find weaknesses in your websites, apps and servers —\nbefore attackers exploit them.",
     "cta": "Get in touch"
   },
   "findings": {
-    "title": "What we find",
+    "title": "What problems we find",
     "items": [
       {
-        "name": "Unauthenticated APIs",
-        "desc": "Your clients, payments, budget — accessible with a single curl request"
+        "name": "Open access to data",
+        "desc": "Customer data, payments, internal documents — accessible to anyone on the internet without a password"
       },
       {
-        "name": "Hardcoded keys",
-        "desc": "API keys in source maps, fallback tokens in code — full access to WhatsApp, payment systems"
+        "name": "Leaked secret keys",
+        "desc": "Payment system and service keys exposed publicly — fraudsters can perform operations on your behalf"
       },
       {
         "name": "Source code leaks",
-        "desc": "Source maps, .git repositories, server.js — your entire codebase exposed"
+        "desc": "Your website or app code is accessible to everyone — attackers study it to find even more vulnerabilities"
       },
       {
         "name": "Personal data exposure",
-        "desc": "Names, phone numbers, payments of your clients — publicly accessible"
+        "desc": "Customer names, phone numbers and payments exposed publicly — a legal violation risking major fines"
       },
       {
-        "name": "Server vulnerabilities",
-        "desc": "SSH with password, open DB ports, CORS wildcard, missing security headers"
+        "name": "Unprotected servers",
+        "desc": "Weak passwords, open databases — attackers can gain full control over your system"
       },
       {
-        "name": "Unauthenticated write access",
-        "desc": "Creating, deleting data, sending messages — no login required"
+        "name": "Unauthorized data modification",
+        "desc": "Anyone can create, modify and delete data in your system without login credentials"
+      }
+    ]
+  },
+  "services": {
+    "title": "What we test",
+    "items": [
+      {
+        "name": "Websites & web applications",
+        "desc": "Online stores, CRM systems, customer portals, corporate websites — any site or online service"
+      },
+      {
+        "name": "Mobile applications (APK)",
+        "desc": "Android app analysis: data storage, network traffic, server API and tamper protection testing"
+      },
+      {
+        "name": "Servers & infrastructure",
+        "desc": "Server, database and cloud service testing — everything accessible from the internet"
       }
     ]
   },
   "process": {
-    "title": "Process",
+    "title": "How we work",
     "steps": [
-      { "cmd": "recon", "desc": "Information gathering: subdomains, DNS, ports, technologies" },
-      { "cmd": "scan", "desc": "Automated scanning: nuclei, nikto, testssl" },
-      { "cmd": "exploit", "desc": "Manual testing: API, auth, IDOR, source maps, keys" },
-      { "cmd": "report", "desc": "Report: every vulnerability with PoC and remediation guide" },
-      { "cmd": "monitor", "desc": "Monthly checks: no new vulnerabilities appear" }
+      { "cmd": "recon", "desc": "Study your infrastructure: websites, servers, applications" },
+      { "cmd": "scan", "desc": "Automated scanning for known vulnerabilities" },
+      { "cmd": "exploit", "desc": "Manual testing: we try to break in like a real attacker would" },
+      { "cmd": "report", "desc": "Detailed report: what we found, how dangerous it is, how to fix it" },
+      { "cmd": "monitor", "desc": "Monthly monitoring: we verify no new problems appear" }
     ]
   },
   "pricing": {
@@ -58,13 +75,14 @@
       "name": "PENTEST",
       "price": "from 2,000,000 ₸",
       "features": [
-        "Full black-box audit",
-        "All subdomains and servers",
-        "API testing",
+        "Full security assessment",
+        "All websites, subdomains and servers",
+        "API and integration testing",
+        "Mobile app analysis (APK)",
         "Source code analysis",
-        "Report with PoC for each vulnerability",
+        "Report with evidence for each vulnerability",
         "Prioritized remediation plan",
-        "Timeframe: 3–5 days"
+        "Timeframe: 3–5 business days"
       ]
     },
     "monitoring": {
@@ -72,7 +90,7 @@
       "price": "from 100,000 ₸/mo",
       "features": [
         "Monthly security assessment",
-        "New vulnerability scanning",
+        "New vulnerability detection",
         "Remediation verification",
         "Report: all clear or new issues",
         "Priority support"
@@ -80,17 +98,24 @@
     }
   },
   "contact": {
-    "title": "Contact",
+    "title": "Contact us",
     "name": "Name",
     "company": "Company",
     "website": "Website",
     "phone": "Phone / Telegram",
     "message": "Message",
     "submit": "Send request",
-    "success": "Request sent. We will contact you."
+    "success": "Request sent. We will contact you shortly."
   },
   "clients": {
     "title": "Trusted by"
+  },
+  "dogovor": {
+    "title": "Security Testing Agreement",
+    "subtitle": "Download, fill in your company details and sign from both sides",
+    "download": "Download agreement",
+    "back": "← Back to home",
+    "link": "Agreement"
   },
   "footer": {
     "location": "Astana, Kazakhstan"

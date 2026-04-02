@@ -20,7 +20,7 @@ export function Pricing() {
             {t('pentest.price')}
           </p>
           <ul className="space-y-2">
-            {[0, 1, 2, 3, 4, 5, 6].map((i) => (
+            {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
               <li key={i} className="text-gray text-sm flex items-start gap-2">
                 <span className="text-red mt-0.5">-</span>
                 {t(`pentest.features.${i}`)}
