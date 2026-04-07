@@ -72,8 +72,8 @@
   "pricing": {
     "title": "Pricing",
     "pentest": {
-      "name": "PENTEST",
-      "price": "from 2,000,000 ₸",
+      "name": "BLACK BOX PENTEST",
+      "price": "from $4,000",
       "features": [
         "Full security assessment",
         "All websites, subdomains and servers",
@@ -87,7 +87,7 @@
     },
     "monitoring": {
       "name": "MONITORING",
-      "price": "from 100,000 ₸/mo",
+      "price": "from $500/mo",
       "features": [
         "Monthly security assessment",
         "New vulnerability detection",
