@@ -71,28 +71,37 @@
   },
   "pricing": {
     "title": "Pricing",
-    "pentest": {
-      "name": "BLACK BOX PENTEST",
-      "price": "from $5,000",
-      "features": [
-        "Full security assessment",
-        "All websites, subdomains and servers",
-        "API and integration testing",
-        "Mobile app analysis (APK)",
-        "Source code analysis",
-        "Report with evidence for each vulnerability",
-        "Prioritized remediation plan",
-        "Timeframe: 3–5 business days"
+    "model": {
+      "name": "FREE AUDIT — PAY PER FINDING",
+      "desc": "Sign NDA. We perform a full black-box pentest for free. You only pay for confirmed vulnerabilities — each one delivered with a working proof-of-concept.",
+      "points": [
+        "Free black-box pentest under NDA",
+        "Pay only for confirmed findings (with PoC)",
+        "Severity classified by CVSS 3.1",
+        "Payment within 30 days after the report",
+        "$500 refundable deposit, credited to the final invoice",
+        "Cap: maximum $50,000 per report",
+        "10% discount for a public testimonial or case study"
+      ]
+    },
+    "tiers": {
+      "title": "Per confirmed finding",
+      "items": [
+        { "level": "LOW", "cvss": "CVSS 0.1–3.9", "price": "$100" },
+        { "level": "MEDIUM", "cvss": "CVSS 4.0–6.9", "price": "$1,000" },
+        { "level": "HIGH", "cvss": "CVSS 7.0–8.9", "price": "$2,500" },
+        { "level": "CRITICAL", "cvss": "CVSS 9.0–10.0", "price": "$5,000" }
       ]
     },
     "monitoring": {
-      "name": "MONITORING",
-      "price": "from $1,000/mo",
+      "name": "MONTHLY MONITORING",
+      "price": "$1,000/mo",
+      "desc": "After you become a client",
       "features": [
-        "Monthly security assessment",
+        "Continuous security monitoring",
         "New vulnerability detection",
         "Remediation verification",
-        "Report: all clear or new issues",
+        "Monthly status report",
         "Priority support"
       ]
     }

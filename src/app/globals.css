@@ -5,6 +5,8 @@
   --bg: #0a0a0a;
   --green: #00ff41;
   --red: #ff0040;
+  --yellow: #ffd700;
+  --orange: #ff8c00;
   --gray: #c0c0c0;
   --dark-gray: #666;
   --card-bg: #111111;
@@ -15,6 +17,8 @@
   --color-bg: var(--bg);
   --color-green: var(--green);
   --color-red: var(--red);
+  --color-yellow: var(--yellow);
+  --color-orange: var(--orange);
   --color-gray: var(--gray);
   --color-dark-gray: var(--dark-gray);
   --color-card-bg: var(--card-bg);
