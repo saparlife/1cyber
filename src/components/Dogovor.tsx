@@ -7,7 +7,7 @@ const contracts = {
   ru: {
     docTitle: 'ДОГОВОР',
     docSubtitle: 'на проведение тестирования безопасности',
-    city: 'г. Астана',
+    city: 'г. Алматы',
     dateLine: '«____» ______________ 20___ г.',
     sections: [
       {
@@ -171,7 +171,7 @@ const contracts = {
   kz: {
     docTitle: 'ШАРТ',
     docSubtitle: 'қауіпсіздікті тексеруді жүргізуге',
-    city: 'Астана қ.',
+    city: 'Алматы қ.',
     dateLine: '«____» ______________ 20___ ж.',
     sections: [
       {
@@ -335,7 +335,7 @@ const contracts = {
   en: {
     docTitle: 'AGREEMENT',
     docSubtitle: 'for Security Testing Services',
-    city: 'Astana',
+    city: 'Almaty',
     dateLine: '"____" ______________ 20___',
     sections: [
       {

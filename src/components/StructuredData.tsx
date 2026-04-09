@@ -11,7 +11,7 @@ export function StructuredData() {
     description: t('description'),
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Astana',
+      addressLocality: 'Almaty',
       addressCountry: 'KZ',
     },
     areaServed: 'KZ',
