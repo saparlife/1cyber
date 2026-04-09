@@ -78,7 +78,7 @@
         "step": "03",
         "name": "Report with proof",
         "time": "Day 7",
-        "desc": "You receive a detailed report. Every vulnerability comes with a working proof-of-concept (PoC) — real evidence, not guesswork."
+        "desc": "You receive a detailed report. Every vulnerability comes with a working proof-of-concept (PoC) and specific remediation guidance."
       },
       {
         "step": "04",
