@@ -9,39 +9,101 @@ export function Pricing() {
   const locale = useLocale();
 
   const tiers = [0, 1, 2, 3];
-  const points = [0, 1, 2, 3, 4, 5, 6];
-  const monitoringFeatures = [0, 1, 2, 3, 4];
+  const planAPoints = [0, 1, 2, 3, 4, 5];
+  const planBPoints = [0, 1, 2, 3, 4, 5];
 
   return (
     <section className="py-20 px-6 max-w-5xl mx-auto">
-      <h2 className="text-green text-2xl md:text-3xl font-bold mb-12 fade-in">
+      <h2 className="text-green text-2xl md:text-3xl font-bold mb-4 fade-in">
         {'> '}{t('title')}
       </h2>
 
-      {/* Free audit model card */}
-      <div className="fade-in bg-card-bg border-2 border-red p-6 mb-6">
-        <h3 className="text-red text-lg md:text-xl font-bold mb-2 tracking-wider">
-          {t('model.name')}
-        </h3>
-        <div className="border-t border-card-border my-3" />
-        <p className="text-gray text-sm md:text-base mb-5 leading-relaxed">
-          {t('model.desc')}
-        </p>
-        <ul className="space-y-2">
-          {points.map((i) => (
-            <li key={i} className="text-gray text-sm flex items-start gap-2">
-              <span className="text-red mt-0.5">-</span>
-              {t(`model.points.${i}`)}
-            </li>
-          ))}
-        </ul>
+      <p className="text-dark-gray text-sm mb-12 fade-in">
+        {t('currency_note')}
+      </p>
+
+      {/* Two plans side by side */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        {/* Plan A: Pay Per Finding */}
+        <div className="fade-in bg-card-bg border-2 border-red p-6 flex flex-col">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-red text-lg font-bold tracking-wider">
+              {t('planA.name')}
+            </h3>
+            <span className="text-xs border border-red text-red px-2 py-0.5 uppercase tracking-wider">
+              {t('planA.badge')}
+            </span>
+          </div>
+          <div className="border-t border-card-border my-3" />
+          <p className="text-gray text-sm leading-relaxed mb-5">
+            {t('planA.desc')}
+          </p>
+          <ul className="space-y-2 flex-1">
+            {planAPoints.map((i) => (
+              <li key={i} className="text-gray text-sm flex items-start gap-2">
+                <span className="text-red mt-0.5 shrink-0">-</span>
+                {t(`planA.points.${i}`)}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Plan B: Annual Subscription */}
+        <div className="fade-in bg-card-bg border-2 border-green p-6 flex flex-col relative">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-green text-lg font-bold tracking-wider">
+              {t('planB.name')}
+            </h3>
+            <span className="text-xs border border-green text-green px-2 py-0.5 uppercase tracking-wider">
+              {t('planB.badge')}
+            </span>
+          </div>
+          <div className="border-t border-card-border my-3" />
+          <p className="text-green text-2xl md:text-3xl font-bold mb-1">
+            {t('planB.price')}
+          </p>
+          <p className="text-dark-gray text-xs mb-4 italic">
+            {t('planB.contract')}
+          </p>
+          <p className="text-gray text-sm leading-relaxed mb-5">
+            {t('planB.desc')}
+          </p>
+          <ul className="space-y-2 flex-1">
+            {planBPoints.map((i) => (
+              <li key={i} className="text-gray text-sm flex items-start gap-2">
+                <span className="text-green mt-0.5 shrink-0">-</span>
+                {t(`planB.points.${i}`)}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* Comparison helper */}
+      <div className="fade-in bg-card-bg border border-card-border p-5 mb-8">
+        <h4 className="text-green text-sm font-bold mb-3 tracking-wider uppercase">
+          {'> '}{t('comparison.title')}
+        </h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="flex items-start gap-2">
+            <span className="text-red shrink-0 font-bold">A</span>
+            <span className="text-gray text-sm">{t('comparison.payPerFinding')}</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-green shrink-0 font-bold">B</span>
+            <span className="text-gray text-sm">{t('comparison.subscription')}</span>
+          </div>
+        </div>
       </div>
 
       {/* Severity tiers */}
-      <div className="fade-in mb-6">
-        <h4 className="text-green text-sm font-bold mb-3 tracking-wider uppercase">
+      <div className="fade-in mb-8">
+        <h4 className="text-green text-sm font-bold mb-1 tracking-wider uppercase">
           {'> '}{t('tiers.title')}
         </h4>
+        <p className="text-dark-gray text-xs mb-4">
+          {t('tiers.subtitle')}
+        </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {tiers.map((i) => (
             <div
@@ -60,28 +122,6 @@ export function Pricing() {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Monitoring card */}
-      <div className="fade-in bg-card-bg border-2 border-green p-6 mb-8">
-        <h3 className="text-green text-lg font-bold mb-1 tracking-wider">
-          {t('monitoring.name')}
-        </h3>
-        <div className="border-t border-card-border my-3" />
-        <p className="text-green text-2xl md:text-3xl font-bold mb-1">
-          {t('monitoring.price')}
-        </p>
-        <p className="text-gray text-xs mb-4 italic">
-          {t('monitoring.desc')}
-        </p>
-        <ul className="space-y-2">
-          {monitoringFeatures.map((i) => (
-            <li key={i} className="text-gray text-sm flex items-start gap-2">
-              <span className="text-green mt-0.5">-</span>
-              {t(`monitoring.features.${i}`)}
-            </li>
-          ))}
-        </ul>
       </div>
 
       {/* Dogovor link */}

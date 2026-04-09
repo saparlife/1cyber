@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "1CYBER — Security Testing for Your Business",
-    "description": "We test websites, mobile apps and servers for vulnerabilities. Penetration testing, security audit, monitoring. Astana, Kazakhstan."
+    "description": "We test websites, mobile apps and servers for vulnerabilities. Free audit — pay only for confirmed findings. Astana, Kazakhstan."
   },
   "nav": {
     "ru": "RUS",
@@ -9,36 +9,36 @@
     "en": "ENG"
   },
   "hero": {
-    "headline": "We test your business security",
-    "sub": "We find weaknesses in your websites, apps and servers —\nbefore attackers exploit them.",
-    "cta": "Get in touch"
+    "headline": "We hack your business — so criminals can't",
+    "sub": "Free security audit for your websites, apps and servers.\nYou only pay if we find real vulnerabilities.",
+    "cta": "Request free audit"
   },
   "findings": {
-    "title": "What problems we find",
+    "title": "What we find in companies like yours",
     "items": [
       {
-        "name": "Open access to data",
-        "desc": "Customer data, payments, internal documents — accessible to anyone on the internet without a password"
+        "name": "Customer data leaks",
+        "desc": "Names, phone numbers, payment details — accessible to anyone without a password. This means fines and loss of customer trust."
       },
       {
-        "name": "Leaked secret keys",
-        "desc": "Payment system and service keys exposed publicly — fraudsters can perform operations on your behalf"
+        "name": "Payment system keys exposed",
+        "desc": "Secret keys for Kaspi, Stripe or other payment systems found in open access. Attackers can make transactions on your behalf."
       },
       {
-        "name": "Source code leaks",
-        "desc": "Your website or app code is accessible to everyone — attackers study it to find even more vulnerabilities"
+        "name": "Full server access",
+        "desc": "Weak passwords or open databases let attackers take complete control — read, modify, or delete all your data."
       },
       {
-        "name": "Personal data exposure",
-        "desc": "Customer names, phone numbers and payments exposed publicly — a legal violation risking major fines"
+        "name": "Source code exposed",
+        "desc": "Your application code is publicly accessible. Attackers study it to find every weak point and exploit them."
       },
       {
-        "name": "Unprotected servers",
-        "desc": "Weak passwords, open databases — attackers can gain full control over your system"
+        "name": "Unauthorized actions",
+        "desc": "Anyone can create orders, change prices, modify accounts — without logging in. Real cases we find regularly."
       },
       {
-        "name": "Unauthorized data modification",
-        "desc": "Anyone can create, modify and delete data in your system without login credentials"
+        "name": "Legal violations",
+        "desc": "Personal data stored or transmitted insecurely. Under Kazakhstan and international law, this means significant fines."
       }
     ]
   },
@@ -46,83 +46,130 @@
     "title": "What we test",
     "items": [
       {
-        "name": "Websites & web applications",
-        "desc": "Online stores, CRM systems, customer portals, corporate websites — any site or online service"
+        "name": "Websites & web apps",
+        "desc": "Online stores, CRM systems, customer portals, corporate websites — any web service your business runs"
       },
       {
-        "name": "Mobile applications (APK)",
-        "desc": "Android app analysis: data storage, network traffic, server API and tamper protection testing"
+        "name": "Mobile applications",
+        "desc": "Android & iOS app analysis: how data is stored, network traffic security, API vulnerabilities, tamper protection"
       },
       {
-        "name": "Servers & infrastructure",
-        "desc": "Server, database and cloud service testing — everything accessible from the internet"
+        "name": "Servers & cloud",
+        "desc": "Servers, databases, cloud infrastructure — everything accessible from the internet that attackers can target"
       }
     ]
   },
   "process": {
-    "title": "How we work",
+    "title": "How it works",
     "steps": [
-      { "cmd": "recon", "desc": "Study your infrastructure: websites, servers, applications" },
-      { "cmd": "scan", "desc": "Automated scanning for known vulnerabilities" },
-      { "cmd": "exploit", "desc": "Manual testing: we try to break in like a real attacker would" },
-      { "cmd": "report", "desc": "Detailed report: what we found, how dangerous it is, how to fix it" },
-      { "cmd": "monitor", "desc": "Monthly monitoring: we verify no new problems appear" }
+      {
+        "step": "01",
+        "name": "Sign documents",
+        "time": "Day 0",
+        "desc": "We sign NDA + Authorization to Test. This protects both sides legally. No work begins without your written permission."
+      },
+      {
+        "step": "02",
+        "name": "Security testing",
+        "time": "7 days",
+        "desc": "Our team tests your systems exactly like real attackers would — but safely and within the agreed scope."
+      },
+      {
+        "step": "03",
+        "name": "Report with proof",
+        "time": "Day 7",
+        "desc": "You receive a detailed report. Every vulnerability comes with a working proof-of-concept (PoC) — real evidence, not guesswork."
+      },
+      {
+        "step": "04",
+        "name": "You verify everything",
+        "time": "14 days",
+        "desc": "Your team checks each PoC. You confirm which findings are valid. We sign an acceptance act together."
+      },
+      {
+        "step": "05",
+        "name": "Payment",
+        "time": "30 days",
+        "desc": "You pay only for confirmed vulnerabilities based on severity. Payment within 30 days after the acceptance act."
+      },
+      {
+        "step": "06",
+        "name": "Ongoing protection",
+        "time": "Optional",
+        "desc": "Subscribe to annual monitoring — we check every month that new code changes haven't introduced new vulnerabilities."
+      }
     ]
   },
   "pricing": {
     "title": "Pricing",
-    "model": {
-      "name": "FREE AUDIT — PAY PER FINDING",
-      "desc": "Sign NDA. We perform a full black-box pentest for free. You only pay for confirmed vulnerabilities — each one delivered with a working proof-of-concept.",
+    "currency_note": "Prices in USD. We accept payment in KZT and RUB at the current exchange rate.",
+    "planA": {
+      "name": "PAY PER FINDING",
+      "badge": "One-time",
+      "desc": "Free security audit. You only pay for confirmed vulnerabilities — each one delivered with a working proof-of-concept.",
       "points": [
         "Free black-box pentest under NDA",
-        "Pay only for confirmed findings (with PoC)",
-        "Severity classified by CVSS 3.1",
-        "Payment within 30 days after the report",
-        "$500 refundable deposit, credited to the final invoice",
-        "Cap: maximum $50,000 per report",
+        "Pay only for confirmed findings with PoC",
+        "Severity rated by international CVSS 3.1 standard",
+        "14 days to verify our findings",
+        "Payment within 30 days after acceptance",
         "10% discount for a public testimonial or case study"
       ]
     },
-    "tiers": {
-      "title": "Per confirmed finding",
-      "items": [
-        { "level": "LOW", "cvss": "CVSS 0.1–3.9", "price": "$100" },
-        { "level": "MEDIUM", "cvss": "CVSS 4.0–6.9", "price": "$1,000" },
-        { "level": "HIGH", "cvss": "CVSS 7.0–8.9", "price": "$2,500" },
-        { "level": "CRITICAL", "cvss": "CVSS 9.0–10.0", "price": "$5,000" }
+    "planB": {
+      "name": "SECURITY PARTNER",
+      "badge": "Annual subscription",
+      "price": "$1,000/mo",
+      "contract": "12-month contract",
+      "desc": "Full security coverage. Initial audit + monthly monitoring. All findings from the initial audit are included free.",
+      "points": [
+        "Full initial pentest — findings included for free",
+        "Monthly security checks of new code & changes",
+        "Remediation verification after fixes",
+        "Monthly security status report",
+        "Priority support & 24h response for critical issues",
+        "Re-test after each major release"
       ]
     },
-    "monitoring": {
-      "name": "MONTHLY MONITORING",
-      "price": "$1,000/mo",
-      "desc": "After you become a client",
-      "features": [
-        "Continuous security monitoring",
-        "New vulnerability detection",
-        "Remediation verification",
-        "Monthly status report",
-        "Priority support"
+    "tiers": {
+      "title": "Price per confirmed finding",
+      "subtitle": "Only applies to Pay Per Finding plan",
+      "items": [
+        { "level": "LOW", "cvss": "CVSS 0.1–3.9", "price": "$100" },
+        { "level": "MEDIUM", "cvss": "CVSS 4.0–6.9", "price": "$300" },
+        { "level": "HIGH", "cvss": "CVSS 7.0–8.9", "price": "$1,000" },
+        { "level": "CRITICAL", "cvss": "CVSS 9.0–10.0", "price": "$2,000" }
       ]
+    },
+    "comparison": {
+      "title": "Which plan is right for you?",
+      "payPerFinding": "You need a one-time check and want to know your current security level",
+      "subscription": "You want continuous protection — we check every month that your developers haven't introduced new vulnerabilities"
     }
   },
+  "portfolio": {
+    "title": "Our work",
+    "desc": "We follow responsible disclosure — like Google Project Zero. After finding vulnerabilities through bug bounty programs (HackerOne, Bugcrowd), we publish detailed case studies after a 90-day disclosure period.",
+    "coming": "Case studies coming soon",
+    "coming_desc": "Our first reports are currently in the 90-day disclosure period. Detailed write-ups with technical analysis will be published here."
+  },
   "contact": {
-    "title": "Contact us",
+    "title": "Request a free audit",
     "name": "Name",
     "company": "Company",
     "website": "Website",
     "phone": "Phone / Telegram",
     "message": "Message",
     "submit": "Send request",
-    "success": "Request sent. We will contact you shortly."
+    "success": "Request sent. We will contact you within 24 hours."
   },
   "clients": {
     "title": "Trusted by"
   },
   "dogovor": {
     "title": "Security Testing Agreement",
-    "subtitle": "Download, fill in your company details and sign from both sides",
-    "download": "Download agreement",
+    "subtitle": "Includes NDA, Authorization to Test, and Service Terms. Download, fill in your company details and sign.",
+    "download": "Download agreement (PDF)",
     "back": "← Back to home",
     "link": "Agreement"
   },
