@@ -121,7 +121,7 @@
       "badge": "Annual subscription",
       "price": "$1,000/mo",
       "contract": "12-month contract",
-      "desc": "Full security coverage. Initial audit + monthly monitoring. All findings from the initial audit are included free.",
+      "desc": "We help you keep security under control. Initial audit + monthly monitoring. All findings from the initial audit are included free.",
       "points": [
         "Full initial pentest — findings included for free",
         "Monthly security checks of new code & changes",
