@@ -4,7 +4,6 @@ import Image from 'next/image';
 const clients = [
   { name: 'Temir Service', logo: '/clients/temir-service.svg', url: 'https://temir-service.kz/' },
   { name: 'ShopAdili', logo: '/clients/shopadili.png', url: 'https://shopadili.com/' },
-  { name: 'CPG Media Group', logo: '/clients/cpgmedia.svg', url: 'https://cpgmediagroup.com/' },
   { name: 'Shaqyr', logo: '/clients/shaqyr.png', url: 'https://www.shaqyr.com/' },
 ];
 
@@ -17,7 +16,7 @@ export function Clients() {
         {'> '}{t('title')}
       </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 fade-in">
+      <div className="grid grid-cols-3 gap-4 fade-in">
         {clients.map((client, i) => (
           <a
             key={i}
