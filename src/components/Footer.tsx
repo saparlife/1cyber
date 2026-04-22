@@ -7,6 +7,19 @@ export function Footer() {
 
   return (
     <footer className="py-10 px-6 text-center border-t border-card-border">
+      <div className="mb-6 pb-6 border-b border-card-border">
+        <p className="text-dark-gray text-xs uppercase tracking-wider mb-2">
+          {t('radar_label')}
+        </p>
+        <a
+          href="https://t.me/bugbountyradar"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-green hover:underline text-sm"
+        >
+          📡 {t('radar_cta')}
+        </a>
+      </div>
       <p className="text-dark-gray text-sm">
         1cyber.one
       </p>
